@@ -37,13 +37,22 @@
 					<p>Also, a duck filled photo is about the only correctly sized one I could find for now.</p>
 				</div>
 				<div class="pleasescroll">
-					<a href="#cd-timeline">
+					<a id="downscroll" href="#cd-timeline">
 						<i class="fa fa-angle-down"></i>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div> 
+
+	<script>
+		$("#downscroll").click(function(e) {
+			e.preventDefault();
+    		$('html, body').animate({
+    		    scrollTop: $("#cd-timeline").offset().top
+  			}, 2000);
+		});
+	</script>
 
 	<section id="cd-timeline" class="cd-container">
 
