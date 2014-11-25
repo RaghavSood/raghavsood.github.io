@@ -104,6 +104,8 @@
 		
 		    // top position relative to the document
 		    var pos = $(id).offset().top - 20;
+
+		    history.pushState({}, "", id);
 		
 		    // animated top scrolling
 		    $('body, html').animate({scrollTop: pos});
