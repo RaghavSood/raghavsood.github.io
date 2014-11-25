@@ -74,7 +74,7 @@ Modules - reusable parts of our design
   text-align: center;
   height: 100%;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
@@ -139,6 +139,31 @@ Modules - reusable parts of our design
   font-size: 0.8em;
 }
 
+.pleasescroll {
+  color: #ffffff;
+  font-size: 140px;
+  opacity: 0.4;
+}
+
+.pleasescroll a {
+  color: #8e8e8e;
+  text-shadow: 0 0 0.5px rgba(53,184,143,0.25);
+  -moz-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -webkit-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -o-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -ms-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  text-decoration: none;
+}
+
+.pleasescroll a:hover {
+  color: #ffffff;
+}
+
+.desc {
+  margin-top: 20px;
+  color: #ffffff;
+}
 /* -------------------------------- 
 
 Main components 
@@ -372,7 +397,8 @@ header h1 {
 .cd-timeline-content .cd-date {
   float: left;
   padding: .8em 0;
-  opacity: .7;
+  opacity: .4;
+  color: #FFFFFF;
 }
 .cd-timeline-content::before {
   content: '';
