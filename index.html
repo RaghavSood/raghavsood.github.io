@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>Raghav Sood</title>
+	<script src="http:///www.parsecdn.com/js/parse-1.3.2.min.js"></script>
+</head>
+<body>
+	<main>
+	<div class="cd-fixed-bg">
+		<div class="top">
+			<div class="topcentered">
+				<h1>Hi! I'm Raghav Sood</h1>
+				<div class="socialtop">
+					<a target="_blank" href="mailto:raghavsood@appaholics.in"><i class="fa fa-envelope"></i></a>
+					<a target="_blank" href="https://github.com/RaghavSood/"><i class="fa fa-github"></i></a>
+					<a target="_blank" href="https://www.facebook.com/raghavssood97"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="http://instagram.com/raghavsood97"><i class="fa fa-instagram"></i></a>
+					<a target="_blank" href="http://www.twitter.com/ARaghavSood"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="https://plus.google.com/+RaghavSood"><i class="fa fa-google-plus"></i></a>
+					<a target="_blank" href="http://in.linkedin.com/in/raghavsood97"><i class="fa fa-linkedin"></i></a>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<section id="cd-timeline" class="cd-container">
+
+	</section> <!-- cd-timeline -->
+	<script>
+	function displayContent(json) {
+		console.log("Content");
+		var alldata = "";
+		var len = json.feed.entry.length;
+		for (var i=0; i<len; i++) {
+			var title = json.feed.entry[i].gsx$title.$t;
+			var content = json.feed.entry[i].gsx$content.$t;
+			var date = json.feed.entry[i].gsx$date.$t;
+			var moretext = json.feed.entry[i].gsx$moretext.$t;
+			var morelink = json.feed.entry[i].gsx$morelink.$t;
+			var permalink = json.feed.entry[i].gsx$permalink.$t;
+			var important = json.feed.entry[i].gsx$important.$t;
+			var string = '<div class="cd-timeline-block" id="' + permalink + '">\n';
+			string += '<a class="titlelink" href="#' + permalink + '">';	
+			if(important=='1') { 
+				string += '<div class="cd-timeline-img cd-important">\n</div> <!-- cd-timeline-img -->'; 
+			} else {
+				string += '<div class="cd-timeline-img cd-icon">\n</div> <!-- cd-timeline-img -->'; 
+			}
+			string += '</a>';
+			string += '<div class="cd-timeline-content">\n';
+			string += '<h1><a class="titlelink" href="#' + permalink + '">' + title + '</a></h1>\n';
+			string += '<p>' + content + '</p>\n';
+			if(moretext!='') {
+				string += '<a target="_blank" href="' + morelink + '" class="cd-read-more">' + moretext + '</a>';
+			}
+			string += '<span class="cd-date">' + date + '</span>\n';
+			string += '</div>\n';
+			string += '</div>\n';
+			alldata += string;
+		}
+		$(alldata).appendTo('section');
+	}   
+	</script>
+	<script src="http://spreadsheets.google.com/feeds/list/1buIeinBfE07REVEzVICYARqdfSfMUuaGZCCuIqXHf0M/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-57101533-1', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+</main>
+</body>
+</html>
