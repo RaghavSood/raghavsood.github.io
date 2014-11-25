@@ -25,7 +25,19 @@ body, html, main {
   height: 100%;
 }
 
-a {
+a, a:visited{
+  color: #0382A0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 a {
+  color: #acb7c0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 a:visited {
   color: #acb7c0;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
