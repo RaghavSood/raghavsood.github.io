@@ -26,7 +26,7 @@ body, html, main {
 }
 
 a, a:visited{
-  color: #0382A0;
+  color: #00B3DD;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
 }
@@ -103,7 +103,7 @@ Modules - reusable parts of our design
 .top .bar {
   position: absolute; 
   bottom: 18%; 
-  font-size: 21px;
+  font-size: 18px;
   color: #8e8e8e;
   font-weight: bold;
   left: 50%;
