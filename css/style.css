@@ -103,7 +103,7 @@ Modules - reusable parts of our design
 .top .bar {
   position: absolute; 
   bottom: 18%; 
-  font-size: 18px;
+  font-size: 20px;
   color: #8e8e8e;
   font-weight: bold;
   left: 50%;
@@ -137,7 +137,7 @@ Modules - reusable parts of our design
 .topcentered {
   display: inline-block;
   vertical-align: middle;
-  width: 600px;
+  width: 650px;
   padding: 10px 15px;
  }
 
