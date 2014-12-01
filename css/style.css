@@ -27,6 +27,7 @@ body, html, main {
 
 a, a:visited{
   color: #00B3DD;
+  font-weight: bold;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
 }
