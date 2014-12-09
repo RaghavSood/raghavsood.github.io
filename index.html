@@ -29,6 +29,13 @@
 	<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			console.log("Ready");
+			$(".fancybox").fancybox();
+		});
+	</script>
+
 	<title>Raghav Sood</title>
 </head>
 <body>
@@ -137,7 +144,6 @@
 	}   
 	</script>
 	<script src="http://spreadsheets.google.com/feeds/list/1buIeinBfE07REVEzVICYARqdfSfMUuaGZCCuIqXHf0M/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="/js/main.js"></script> <!-- Resource jQuery -->
 
 
@@ -177,10 +183,8 @@
 
 	</script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".fancybox").fancybox();
-		});
+	<script>
+		$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
 	</script>
 </main>
 </body>
