@@ -178,7 +178,10 @@
 		$(document).ready(function() {
 			$(".fancybox").fancybox();
 		});
+
+		$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
 	</script>
+
 </main>
 </body>
 </html>
