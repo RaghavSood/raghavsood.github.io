@@ -29,6 +29,13 @@
 	<link rel="stylesheet" href="/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<script type="text/javascript" src="/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			console.log("Ready");
+			$(".fancybox").fancybox();
+		});
+	</script>
+
 	<title>News - Raghav Sood</title>
 </head>
 <body>
@@ -174,14 +181,9 @@
 
 	</script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			console.log("Ready");
-			$(".fancybox").fancybox();
-			$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
-		});
+	<script>
+		$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
 	</script>
-
 </main>
 </body>
 </html>
