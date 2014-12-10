@@ -112,12 +112,7 @@
 			var permalink = json.feed.entry[i].gsx$permalink.$t;
 			var important = json.feed.entry[i].gsx$important.$t;
 			var string = '<div class="cd-timeline-block" id="' + permalink + '">\n';
-			string += '<a class="titlelink" href="#' + permalink + '">';	
-			if(important=='1') { 
-				string += '<div class="cd-timeline-img cd-important">\n</div> <!-- cd-timeline-img -->'; 
-			} else {
-				string += '<div class="cd-timeline-img cd-icon">\n</div> <!-- cd-timeline-img -->'; 
-			}
+			string += '<a class="titlelink" href="#' + permalink + '">';
 			string += '</a>';
 			string += '<div class="cd-timeline-content">\n';
 			string += '<h1><a class="titlelink" href="#' + permalink + '">' + title + '</a></h1>\n';
