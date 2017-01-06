@@ -4,7 +4,7 @@ $( document ).ready(function() {
     $('.experiencespy').scrollSpy({scrollOffset: 5});
     $('.experiencenav').pushpin({
       top: $('.experiencenav').offset().top - 15,
-      bottom: $('#groupon4').offset().top - 15,
+      bottom: $('#experience').offset().top + $('#experience').outerHeight() - $('.experiencenav').height() - 22.5,
       offset: 0
     });
 });
