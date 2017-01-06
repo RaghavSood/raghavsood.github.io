@@ -3,8 +3,8 @@ $( document ).ready(function() {
     $('.scrollspy').scrollSpy({scrollOffset: 50});
     $('.experiencespy').scrollSpy({scrollOffset: 5});
     $('.experiencenav').pushpin({
-      top: $('.experiencenav').offset().top,
-      bottom: $('#groupon4').offset().top,
+      top: $('.experiencenav').offset().top - 15,
+      bottom: $('#groupon4').offset().top - 15,
       offset: 0
     });
 });
