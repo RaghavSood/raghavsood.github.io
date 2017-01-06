@@ -30,3 +30,7 @@ header, main, footer {
 .pinned {
   position: fixed !important;
 }
+
+.side-nav a {
+	padding-left: 18px !important;
+}
