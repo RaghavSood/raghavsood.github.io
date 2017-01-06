@@ -1,0 +1,32 @@
+header, main, footer {
+  padding-left: 300px;
+}
+
+.section {
+	min-height: 100vh;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.tiny {
+	font-size: 1rem;
+}
+
+// Class for when element is above threshold
+.pin-top {
+  position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+  position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+  position: fixed !important;
+}
