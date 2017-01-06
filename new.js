@@ -10,7 +10,7 @@ $( document ).ready(function() {
     $('.talksspy').scrollSpy({scrollOffset: 5});
     $('.talksnav').pushpin({
       top: $('.talksnav').offset().top - 15,
-      bottom: $('#npc').offset().top + $('#npc').outerHeight() - $('.talksnav').height(),
+      bottom: $('#mhacks2015').offset().top + $('#mhacks2015').outerHeight() - $('.talksnav').height(),
       offset: 0
     });
 });
