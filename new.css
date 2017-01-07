@@ -34,3 +34,30 @@ header, main, footer {
 .side-nav a {
 	padding-left: 18px !important;
 }
+
+.social {
+	font-size: 3rem;
+}
+
+.social a {
+	color: #000000;
+	margin-right: 13px;
+    margin-left: 13px;
+    text-shadow: 0 0 0.5px rgba(53,184,143,0.25);
+    -moz-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    -webkit-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    -o-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    -ms-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    text-decoration: none;
+}
+
+.social a:hover {
+  color: #039be5;
+}
+
+.skill {
+	font-family: 'PT Mono', monospace;
+	padding-top: 10px;
+	color: #9e9e9e !important;
+}
