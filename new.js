@@ -13,4 +13,10 @@ $( document ).ready(function() {
       bottom: $('#mhacks2015').offset().top + $('#mhacks2015').outerHeight() - $('.talksnav').height(),
       offset: 0
     });
+    $('.projectsspy').scrollSpy({scrollOffset: 5});
+    $('.projectsnav').pushpin({
+      top: $('.projectsnav').offset().top - 15,
+      bottom: $('#bb10flashlight').offset().top + $('#bb10flashlight').outerHeight() - $('.projectsnav').height(),
+      offset: 0
+    });
 });
