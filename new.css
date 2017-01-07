@@ -61,3 +61,17 @@ header, main, footer {
 	padding-top: 10px;
 	color: #9e9e9e !important;
 }
+
+.skillword {
+	text-shadow: 0 0 0.5px rgba(53,184,143,0.25);
+    -moz-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    -webkit-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    -o-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    -ms-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
+    text-decoration: none;
+}
+
+.skillword:hover {
+	color: #000000 !important;
+}
