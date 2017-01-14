@@ -8,9 +8,11 @@ var geomaniac = (function(){
 		globe, land, countries, borders, features, cities, scale = 1, moved = true,
 		wasMoved = [], clickPoints = [], dragging, zoom, drag,
 		mapLocations = [];
-
+		console.log(width);
 	if(width < 600) {
+		console.log("Hiding sidebar " + width);
 		width = window.innerWidth - 4;
+		console.log(width);
 		document.querySelector("#sidebar").style.display = "none";
 	}
 
