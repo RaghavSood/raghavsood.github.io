@@ -4,15 +4,16 @@
 <link href="/map/style.css" media="screen" rel="stylesheet" />
 </head>
 <body>
-	<div id="container" style="min-height: 90vh; padding: 15px;">
+	<div id="container" style="min-height: 100vh; padding: 15px;">
 		
 	</div>
-
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 	<script src="/map/datamaps.world.min.js"></script>
+	<script src="/map/zoom.js"></script>
 	<script>
-	    var map = new Datamap({
+	    /*var map = new Datamap({
 	    	element: document.getElementById('container'),
 	    	fills: {
 				defaultFill: "#000000",
@@ -47,7 +48,7 @@
 				highlightFillOpacity: 1,
 				exitDelay: 100, // Milliseconds
 			}
-	    });
+	    });/*
 	    map.bubbles([
 			{
 				name: 'Delhi, India',
@@ -334,7 +335,11 @@
   			popupTemplate: function(geo, data) {
     			return '<div class="hoverinfo">' + data.name;
   			}
-		});
+		});*/
 	</script>
+	<button class="zoom-button" data-zoom="reset">0</button>
+	<button class="zoom-button" data-zoom="out">-</button>
+	<button class="zoom-button" data-zoom="in">+</button>
+	<div id="zoom-info"></div>
 </body>
 </html>
