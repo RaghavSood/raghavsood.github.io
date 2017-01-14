@@ -104,6 +104,7 @@ var geomaniac = (function(){
 				c.strokeStyle = "rgba(255, 255, 255, 0.4)", c.lineWidth = 1, c.beginPath(), path(borders), c.stroke();	
 
 			// cities
+			/*
 			for(var i in cities){
 
 				// no show
@@ -132,7 +133,7 @@ var geomaniac = (function(){
 					//c.fillStyle = "rgba(32, 45, 21, 0.2)", c.beginPath(), c.fillText(decodeURI(cities[i].properties.city).toUpperCase(), xyFromCoordinates[0], xyFromCoordinates[1]);
 					//c.fillStyle = 'rgba(255, 255, 255, 0.0)', c.beginPath(), c.fillRect(xyFromCoordinates[0] -1, xyFromCoordinates[1] -6, (decodeURI(cities[i].properties.city).toUpperCase().length * 5), 7);
 				}
-			}
+			}*/
 
 			// tweet spots
 			for(var i in mapLocations){
