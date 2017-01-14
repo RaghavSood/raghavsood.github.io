@@ -1,0 +1,340 @@
+<html>
+<head>
+<title>Map</title>
+<link href="/style.css" media="screen" rel="stylesheet" />
+</head>
+<body>
+	<div id="container" style="min-height: 90vh; padding: 15px;">
+		
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+	<script src="/datamaps.world.min.js"></script>
+	<script>
+	    var map = new Datamap({
+	    	element: document.getElementById('container'),
+	    	fills: {
+				defaultFill: "#000000",
+				cityFill: "#FC8D59"
+			},
+			geographyConfig: {
+				hideAntarctica: false,
+				borderColor: '#ddf9ff',
+				highlightOnHover: true,
+				popupOnHover: false,
+				highlightFillColor: '#000000',
+				highlightBorderColor: '#51ff66',
+				highlightBorderWidth: 1,
+				highlightBorderOpacity: 1
+			},
+			bubblesConfig: {
+				borderWidth: 0,
+				borderOpacity: 0.75,
+				borderColor: '#FFFFFF',
+				popupOnHover: true, // True to show the popup while hovering
+				radius: null,
+				popupTemplate: function(geography, data) { // This function should just return a string
+				  return '<div class="hoverinfo"><strong>' + data.name + '</strong></div>';
+				},
+				fillOpacity: 1,
+				animate: true,
+				highlightOnHover: true,
+				highlightFillColor: '#0C8D59',
+				highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
+				highlightBorderWidth: 2,
+				highlightBorderOpacity: 1,
+				highlightFillOpacity: 1,
+				exitDelay: 100, // Milliseconds
+			}
+	    });
+	    map.bubbles([
+			{
+				name: 'Delhi, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 28.7041,
+				longitude: 77.1025
+  			},
+  			{
+				name: 'Singapore, Singapore',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 1.3521,
+				longitude: 103.8198
+  			},
+  			{
+				name: 'Dallas, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 32.7767,
+				longitude: -96.7970
+  			},
+  			{
+				name: 'Palo Alto, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 37.4419,
+				longitude: -122.1430
+  			},
+  			{
+				name: 'Chapel Hill, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 35.9132,
+				longitude: -79.0558
+  			},
+  			{
+				name: 'Washington DC, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 38.9072,
+				longitude: -77.0369
+  			},
+  			{
+				name: 'New York, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 40.7128,
+				longitude: -74.0059
+  			},
+  			{
+				name: 'Nashville, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 36.1627,
+				longitude: -86.7816
+  			},
+  			{
+				name: 'Charlotte, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 35.2271,
+				longitude: -80.8431
+  			},
+  			{
+				name: 'Phoenix, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 33.4484,
+				longitude: -112.0740
+  			},
+  			{
+				name: 'San Diego, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 32.7157,
+				longitude: -117.1611
+  			},
+  			{
+				name: 'Los Angeles, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 34.0522,
+				longitude: -118.2437
+  			},
+  			{
+				name: 'Chicago, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 41.8781,
+				longitude: -87.6298
+  			},
+  			{
+				name: 'Philadelphia, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 39.9526,
+				longitude: -75.1652
+  			},
+  			{
+				name: 'New Haven, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 41.3083,
+				longitude: -72.9279
+  			},
+  			{
+				name: 'Ann Arbor, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 42.2808,
+				longitude: -83.7430
+  			},
+  			{
+				name: 'Seattle, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 47.6062,
+				longitude: -122.3321
+  			},
+  			{
+				name: 'Las Vegas, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 36.1699,
+				longitude: -115.1398
+  			},
+  			{
+				name: 'Atlanta, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 33.7490,
+				longitude: -84.3880
+  			},
+  			{
+				name: 'Miami, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 25.7617,
+				longitude: -80.1918
+  			},
+  			{
+				name: 'Orlando, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 28.5383,
+				longitude: -81.3792
+  			},
+  			{
+				name: 'Daytona Beach, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 29.2108,
+				longitude: -81.0228
+  			},
+  			{
+				name: 'Pune, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 18.5204,
+				longitude: 73.8567
+  			},
+  			{
+				name: 'Bangalore, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 12.9716,
+				longitude: 77.5946
+  			},
+  			{
+				name: 'Chennai, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 13.0827,
+				longitude: 80.2707
+  			},
+  			{
+				name: 'Mumbai, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 19.0760,
+				longitude: 72.8777
+  			},
+  			{
+				name: 'Muzaffarnagar, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 29.4727,
+				longitude: 77.7085
+  			},
+  			{
+				name: 'Chandigarh, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 30.7333,
+				longitude: 76.7794
+  			},
+  			{
+				name: 'Kochi, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 9.9312,
+				longitude: 76.2673
+  			},
+  			{
+				name: 'Boston, USA',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 42.3601,
+				longitude: -71.0589
+  			},
+  			{
+				name: 'Yogyakarta, Indonesia',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: -7.7956,
+				longitude: 110.3695
+  			},
+  			{
+				name: 'Bali, Indonesia',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: -8.6705,
+				longitude: 115.2126
+  			},
+  			{
+				name: 'Pondicherry, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 11.9139,
+				longitude: 79.8145
+  			},
+  			{
+				name: 'Leh, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 34.1526,
+				longitude: 77.5771
+  			},
+  			{
+				name: 'Jaipur, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 26.9124,
+				longitude: 75.7873
+  			},
+  			{
+				name: 'Ranthambore, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 26.0173,
+				longitude: 76.5026
+  			},
+  			{
+				name: 'Corbett, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 29.5300,
+				longitude: 78.7747
+  			},
+  			{
+				name: 'Binsar, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 29.7054,
+				longitude: 79.7552
+  			},
+  			{
+				name: 'Shimla, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 31.1048,
+				longitude: 77.1734
+  			},
+  			{
+				name: 'Nainital, India',
+    			radius: 3,
+    			fillKey: 'cityFill',
+				latitude: 29.3803,
+				longitude: 79.4636
+  			},
+		], 
+		{
+  			popupTemplate: function(geo, data) {
+    			return '<div class="hoverinfo">' + data.name;
+  			}
+		});
+	</script>
+</body>
+</html>
