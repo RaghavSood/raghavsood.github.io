@@ -408,8 +408,8 @@ var geomaniac = (function(){
 
 			var x = event.pageX - elemLeft,
 				y = event.pageY - elemTop,
-				inverted = projection.invert([x,y]),
-				country = detectCountry(inverted);
+				inverted = projection.invert([x,y]);
+				/*country = detectCountry(inverted);
 
 			// mouse out of current territory
 			if(lastCountryGeometry && country.geometry && lastCountryGeometry.coordinates[0][0] != country.geometry.coordinates[0][0] ){
@@ -436,7 +436,7 @@ var geomaniac = (function(){
 					lastCountryName = country.name;
 					lastCountryGeometry = country.geometry;
 				}
-			}
+			}*/
 			if(mapLocations.length > 0){//} && zoom && zoom.scale() > 6){
 				
 				addPoint(barProjection.invert([x,y]));
@@ -524,7 +524,7 @@ var geomaniac = (function(){
 var mousepos = {};
 
 var frameCount = 0;
-var fps = 30, now, elapsed;
+var fps = 1, now, elapsed;
 var fpsInterval = 1000 / fps;
 var then = Date.now();
 var startTime = then;
@@ -539,7 +539,6 @@ window.addEventListener('load', function(){
 		mousepos.y = (window.Event) ? event.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 	});
 
-	//prefix = helpers.prefixMatch(["webkit", "ms", "Moz", "O"]);
 	geomaniac.orthographic();
 });
 
